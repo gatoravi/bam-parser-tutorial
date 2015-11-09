@@ -11,9 +11,9 @@ make
 ```
 
 ##Usage
-###BAM parsing - no region
+###BAM parsing - no region(entire BAM file)
 ```
-./bam-parser test/example.bam 1
+./bam-parser test/example.bam
 ```
 ###BAM parsing - specify region in chr:start-end format
 ```
