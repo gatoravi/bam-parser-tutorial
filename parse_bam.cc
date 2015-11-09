@@ -1,8 +1,8 @@
-/*  parse_bam.cc -- Example BAM parser
+/*  parse_bam.cc -- Example BAM parser using the htslib API
 
-    Copyright (c) 2015, The Griffith Lab
+    Copyright (c) 2015, Washington University
 
-    Author: Avinash Ramu <aramu@genome.wustl.edu>
+    Author: Avinash Ramu <avinash3003@yahoo.co.in>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
