@@ -1,0 +1,17 @@
+language: cpp
+
+compiler:
+    - clang
+    - gcc
+
+script:
+    - mkdir build && cd build && cmake ..  -DCMAKE_BUILD_TYPE=release && make
+
+os:
+    - linux
+    - osx
+
+notifications:
+    email:
+        on_failure: always
+        on_success: change
