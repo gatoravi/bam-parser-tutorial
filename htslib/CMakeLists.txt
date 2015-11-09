@@ -9,6 +9,7 @@ set(SOURCES
     kstring.c
     knetfile.c
     tbx.c
+    vcf.c
     sam.c)
 
 

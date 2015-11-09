@@ -13,9 +13,14 @@ make
 ##Usage
 ###BAM parsing - no region
 ```
-./bam-parser ../../regtools/tests/integration-test/data/test_hcc1395.bam
+./bam-parser test/example.bam 1
 ```
 ###BAM parsing - specify region in chr:start-end format
 ```
-./bam-parser ../../regtools/tests/integration-test/data/test_hcc1395.bam 1
+./bam-parser test/example.bam 1
+```
+
+###VCF parsing
+```
+./vcf-parser test/example.vcf
 ```
