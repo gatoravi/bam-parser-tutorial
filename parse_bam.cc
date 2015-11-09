@@ -34,12 +34,12 @@ int usage() {
     return 0;
 }
 
-int main(int argc, char* argv[]) {
+int parse_bam(int argc, char* argv[]) {
     if(argc < 2) {
         return usage();
     }
     string bam = string(argv[1]);
-    string region_ = "";
+    string region_ = ".";
     if(argc > 2) {
         region_ = string(argv[2]);
     }
@@ -68,8 +68,9 @@ int main(int argc, char* argv[]) {
         //Initiate the alignment record
         bam1_t *aln = bam_init1();
         while(sam_itr_next(in, iter, aln) >= 0) {
-            cout << endl << aln->core.tid;
-            cout << endl << aln->core.pos;
+            cout << "Read Chr: " << header->target_name[aln->core.tid];
+            cout << "\tPos: " << aln->core.pos;
+            cout << endl;
         }
         hts_itr_destroy(iter);
         hts_idx_destroy(idx);
@@ -78,4 +79,12 @@ int main(int argc, char* argv[]) {
         sam_close(in);
     }
     return 0;
+}
+
+int main(int argc, char* argv[]) {
+    try {
+        parse_bam(argc, argv);
+    } catch (const runtime_error& e) {
+        cerr << e.what();
+    }
 }
