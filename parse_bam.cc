@@ -70,9 +70,14 @@ int parse_bam(int argc, char* argv[]) {
         while(sam_itr_next(in, iter, aln) >= 0) {
             cout << "Read Chr: " << header->target_name[aln->core.tid];
             cout << "\tPos: " << aln->core.pos;
-            cout << "\tSeq: ";
-            for (int i = 0; i < aln->core.l_qseq; ++i)
-                cout << seq_nt16_str[bam_seqi(bam_get_seq(aln), i)];
+            char *seq = new char[aln->core.l_qseq];
+            char *qual = new char[aln->core.l_qseq];
+            uint8_t *quali = bam_get_qual(aln);
+            for (int i = 0; i < aln->core.l_qseq; ++i) {
+                seq[i] = seq_nt16_str[bam_seqi(bam_get_seq(aln), i)];
+                qual[i] = 33 + quali[i];
+            }
+            std::cout << "\tSeq: " << seq << "\tQual: " << qual;
             cout << endl;
         }
         hts_itr_destroy(iter);
