@@ -10,6 +10,10 @@ add_subdirectory ("${PROJECT_SOURCE_DIR}/htslib/")
 add_executable (bam-parser parse_bam.cc)
 target_link_libraries (bam-parser htslib)
 
+#The bam-parser-from-start executable
+add_executable (bam-parser-from-start parse_bam_from_start.cc)
+target_link_libraries (bam-parser-from-start htslib)
+
 #The vcf-parser executable
 add_executable (vcf-parser parse_vcf.cc)
 target_link_libraries (vcf-parser htslib)
