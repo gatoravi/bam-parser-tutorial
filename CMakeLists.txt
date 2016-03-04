@@ -17,3 +17,7 @@ target_link_libraries (bam-parser-from-start htslib)
 #The vcf-parser executable
 add_executable (vcf-parser parse_vcf.cc)
 target_link_libraries (vcf-parser htslib)
+
+#The vcf-parser executable
+add_executable (vcf-parser-region parse_vcf_by_region.cc)
+target_link_libraries (vcf-parser-region htslib)
