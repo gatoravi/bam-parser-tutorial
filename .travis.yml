@@ -8,10 +8,10 @@ script:
     - mkdir build && cd build && cmake ..  -DCMAKE_BUILD_TYPE=release && make
 
 after_success:
-    - ./bam-parser ../test/example.bam
-    - ./bam-parser ../test/example.bam 1
-    - ./vcf-parser ../test/example.vcf
-    - ./vcf-parser-region  ../test/example.vcf 22:167679-175311
+    - ./bam-parser ../test/example.bam > /dev/null
+    - ./bam-parser ../test/example.bam 1 > /dev/null
+    - ./vcf-parser ../test/example.vcf > /dev/null
+    - ./vcf-parser-region  ../test/example.vcf 22:167679-175311 > /dev/null
 
 os:
     - linux
