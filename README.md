@@ -30,5 +30,5 @@ make
 
 ####Pull out variants in a specified region from the VCF
 ```
-./vcf-parser-region  test/example.vcf 22:167679-175311
+./vcf-parser-region  test/example.vcf.gz 22:167679-175311
 ```

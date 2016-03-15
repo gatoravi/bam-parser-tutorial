@@ -11,7 +11,7 @@ after_success:
     - ./bam-parser ../test/example.bam > /dev/null
     - ./bam-parser ../test/example.bam 1 > /dev/null
     - ./vcf-parser ../test/example.vcf > /dev/null
-    - ./vcf-parser-region  ../test/example.vcf 22:167679-175311 > /dev/null
+    - ./vcf-parser-region  ../test/example.vcf.gz 22:167679-175311 > /dev/null
 
 os:
     - linux

@@ -59,6 +59,7 @@ int main(int argc, char* argv[]) {
                  << "\t" << line->pos \
                  << "\t" << line->n_allele << endl;
         }
+        bcf_sr_destroy(sr);
     } else {
         return usage();
     }
