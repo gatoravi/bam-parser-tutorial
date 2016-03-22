@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 
 project(hts-parser)
 
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__STDC_LIMIT_MACROS")
 include_directories ("${PROJECT_SOURCE_DIR}/htslib/")
 include_directories ("${PROJECT_SOURCE_DIR}/htslib/htslib")
 add_subdirectory ("${PROJECT_SOURCE_DIR}/htslib/")
