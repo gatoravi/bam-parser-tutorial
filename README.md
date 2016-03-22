@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/gatoravi/bam-parser-tutorial.svg?branch=master)](https://travis-ci.org/gatoravi/bam-parser-tutorial)
 
 ##Synopsis
-This is a simple BAM parsing tutorial. This uses the htslib API and
+This is a simple BAM/VCF parsing tutorial. This uses the htslib API and
 is supposed to help get started quickly when building with CMake.
 
 ##Install
